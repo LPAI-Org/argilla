@@ -46,7 +46,7 @@ def test_ingest_record_from_dict(dataset):
     )
 
     assert record[0].fields["prompt"] == "What is the capital of France?"
-    assert record[0].suggestions[0]["label"]["value"] == "positive"
+    assert record[0].suggestions[0].value == "positive"
 
 
 def test_ingest_record_from_dict_with_mapping(dataset):
@@ -63,7 +63,7 @@ def test_ingest_record_from_dict_with_mapping(dataset):
     )
 
     assert record[0].fields["prompt"] == "What is the capital of France?"
-    assert record[0].suggestions[0]["label"]["value"] == "positive"
+    assert record[0].suggestions[0].value == "positive"
 
 
 def test_ingest_record_from_dict_with_suggestions(dataset):
